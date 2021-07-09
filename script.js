@@ -15,9 +15,9 @@ function selectCard(card) {
 
 function addWork() {
     // code goes here for add work mode
-    let node = document.createElement("li");
-    let textnode = document.createTextNode("");
-    node.appendChild(textnode);
+    const textInput = document.getElementById('work').value;
+    document.getElementById('selected').children[1].innerHTML = textInput;
+    document.getElementById('work').value = '';
 }
 
 function deleteWork() {
@@ -26,7 +26,9 @@ function deleteWork() {
 }
 
 function update() {
-    // code goes here to update card title
+    const textInput = document.getElementById('cardTitle').value;
+    document.getElementById('selected').children[1].innerHTML = textInput;
+    document.getElementById('cardTitle').value = '';
 }
 
 function clearWorkList() {
@@ -35,7 +37,8 @@ function clearWorkList() {
 }
 
 function changeMode() {
-  // code goes here switch between add work, update card title and delete work
+    document.getElementById('add').style.display = 'none';
+    document.getElementById('edit').style.display = 'block';
 }
 
 function deleteMode() {
