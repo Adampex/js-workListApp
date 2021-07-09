@@ -1,5 +1,16 @@
 function selectCard(card) {
-    // code goes here to select a card  
+    
+    if (card === 'card1') {
+        document.getElementsByClassName('card2')[0].id = '';
+        document.getElementsByClassName('card3')[0].id = '';
+    } else if (card === 'card2') {
+        document.getElementsByClassName('card1')[0].id = '';
+        document.getElementsByClassName('card3')[0].id = '';
+    } else if (card === 'card3') {
+        document.getElementsByClassName('card1')[0].id = '';
+        document.getElementsByClassName('card2')[0].id = '';
+    }
+    document.getElementsByClassName(card)[0].id = 'selected';
 }
 
 function addWork() {
